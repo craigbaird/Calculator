@@ -7,13 +7,13 @@ var path = require('path');
 var bodyParser = require('body-parser');
 var port = (5000);
 var index = require('./modules/index.js');
-// var mathOps = require('./modules/mathOperations.js');
+var mathOperations = require('./modules/mathOperations.js');
 
 // uses
 app.use(express.static('server/public'));
 app.use(bodyParser.urlencoded( {extended: true} ));
 app.use('/', index);
-// app.use('/mathOperations', mathOperations);
+app.use('/mathOperations', mathOperations);
 
 // spin up server
 app.listen(port, function(){

@@ -1,0 +1,18 @@
+.heading {
+  font-size: 40px;
+  margin-left: 10px;
+  margin-bottom: 30px;
+}
+#inputBox1 {
+  font-size: 20px;
+  margin-left: 10px;
+  margin-right: 5px;
+}
+#inputBox2 {
+  font-size: 20px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+button {
+  font-size: 20px;
+}

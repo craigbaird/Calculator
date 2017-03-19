@@ -4,17 +4,19 @@
     <meta charset="utf-8">
     <title>Calculator</title>
     <script type="text/javascript" src="vendors/jquery.js" charset="utf-8"></script>
-    <!-- <script type="text/javascript" src="scripts/serverSideMathOperations.js" charset="utf-8"></script> -->
+    <link rel="stylesheet" type="text/css" href="views/style.css">
+    <script type="text/javascript" src="scripts/clientSideLogic.js" charset="utf-8"></script>
   </head>
   <body>
-    <h1>Calculator</h1>
+    <h1 class="heading">Calculator</h1>
     <div id='container'>
-      <input type='text' placeholder='enter number' id='inputBox1'/>
-      <input type='text' placeholder='enter number' id='inputBox2'/>
-      <button class="addButton">Add</button>
-      <button class="subtractButton">Subtract</button>
-      <button class="multiplyButton">Multiply</button>
-      <button class="divideButton">Divide</button>
+      <input type='text' placeholder='number' id='inputBox1'/>
+      <input type='text' placeholder='number' id='inputBox2'/>
+      <button class="addButton"> + </button>
+      <button class="subtractButton"> - </button>
+      <button class="multiplyButton"> x </button>
+      <button class="divideButton"> ÷ </button>
+      <p class="answer">Answer:</p>
     </div>
 
   </body>
