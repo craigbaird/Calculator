@@ -3,18 +3,56 @@ var express = require( 'express' );
 var router = express.Router();
 // the array of our inventory
 var allTheThings = [];
-var answer;
 
 // routes
 router.get( '/', function( req, res ){
-  console.log( 'inventory base get' );
+  console.log( 'mathOperations base get' );
 
-  // add();
   res.send( allTheThings);
 }); // end send back all the things
 
-router.post( '/calculate', function( req, res ){
-  // called from addItemButton on click
+
+router.post( '/add', function( req, res ){
+// called from addButton on click
+
+  console.log( 'in mathOperations, route:', req.body );
+
+  // add this item to allTheThings
+  allTheThings.push( req.body );
+
+  // send back success
+  res.send( 200 );
+}); // end router.post
+
+
+router.post( '/subtract', function( req, res ){
+// called from subtractButton on click
+
+  console.log( 'in mathOperations, route:', req.body );
+
+  // add this item to allTheThings
+  allTheThings.push( req.body );
+
+  // send back success
+  res.send( 200 );
+}); // end router.post
+
+
+router.post( '/multiply', function( req, res ){
+// called from multiplyButton on click
+
+  console.log( 'in mathOperations, route:', req.body );
+
+  // add this item to allTheThings
+  allTheThings.push( req.body );
+
+  // send back success
+  res.send( 200 );
+}); // end router.post
+
+
+router.post( '/divide', function( req, res ){
+// called from divide Button on click
 
   console.log( 'in mathOperations, route:', req.body );
 
@@ -27,19 +65,6 @@ router.post( '/calculate', function( req, res ){
 
 
 
-  // $('.subtractButton').on('click', function(){
-  //   console.log("subtract button clicked");
-  //   subtract();
-  // });
-  //
-  // $('.multiplyButton').on('click', function(){
-  //   console.log("multiply button clicked");
-  //   multiply();
-  // });
-  // $('.divideButton').on('click', function(){
-  //   console.log("divide button clicked");
-  //   multiply();
-  // });
 
 
 
