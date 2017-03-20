@@ -40,67 +40,12 @@ $(document).ready(function(){
       url: '/mathOperations',
       success: function( response ){
         console.log( 'back from mathOperations with:', response );
-        // display the inventory on DOM
-        calculations( response );
+        // display the answer on DOM
+        $('.answer').text('Answer:' + response);
+        // calculations( response );
       }
     }); // end ajax
-  }; // end getInventory
-
-  var calculations = function(  ){
-      console.log( 'in displayInventory');
-      // empty output
-      // $( '#outputDiv' ).empty();
-      // // loop through items
-      // for (var i = 0; i < items.length; i++) {
-      //   // append them to the outputDiv
-      //   $( '#outputDiv' ).append( '<p><b>' + items[i].name + '</b>: ' + items[i].description + '</p>' );
-      // } // end for
-    }; // end displayInventory
-
-
-
-
-
-
-
-
-
-//   $('.subtractButton').on('click', function(){
-//     console.log("subtract button clicked");
-//     subtract();
-//   });
-//
-//   $('.multiplyButton').on('click', function(){
-//     console.log("multiply button clicked");
-//     multiply();
-//   });
-//   $('.divideButton').on('click', function(){
-//     console.log("divide button clicked");
-//     multiply();
-//   });
-//
-//
-//
-//
-// function add(){
-//   result = input1 + input2;
-//   $('.result').text("Answer " + result);
-// }
-//
-// function subtract(){
-//   result = input1 - input2;
-//   return result;
-// }
-//
-// function multiply(){
-//   result = input1 * input2;
-//   return result;
-// }
-// function divide(){
-//   result = input1 / input2;
-//   return result;
-// }
-
+  }; // end getCalculations
 
 
 }); // end doc Ready
